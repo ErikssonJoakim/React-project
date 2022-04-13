@@ -1,4 +1,9 @@
-const Header = ({header, description}: any) => (
+type HeaderProps = {
+    header: string
+    description: string
+}
+
+const Header: React.FC<HeaderProps> = ({header, description}: HeaderProps) => (
     <div>
         <h1>{header}</h1>
         <p>{description}</p>
