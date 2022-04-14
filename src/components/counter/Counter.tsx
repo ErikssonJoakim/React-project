@@ -6,7 +6,7 @@ type CounterProps = {
     message?: string
 }
 
-const Counter: React.FC<CounterProps> = ({ value, message }: CounterProps) => (
+const Counter: React.FC<CounterProps> = ({ value, message }: Readonly<CounterProps>) => (
     <div className='react-project-counter-main'>
         <h3>{value}</h3>
         {message && <p>{message}</p>}

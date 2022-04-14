@@ -7,7 +7,7 @@ type ButtonProps = {
     buttonClassName?: string
 }
 
-const Button: React.FC<ButtonProps> = ({name, onClick, buttonClassName}: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({name, onClick, buttonClassName}: Readonly<ButtonProps>) => {
     
     const classNames = (): string => (
         buttonClassName ? `btn ${buttonClassName}` : 'btn'
