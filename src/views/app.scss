@@ -8,10 +8,10 @@
 
       .btn {
         &.green {
-          background-color: green;
+          background: radial-gradient(#acffc2, #2daf00);
         }
         &.red {
-          background-color: red;
+          background: radial-gradient(#ffa7a7, #ff0000);
         }
       }
     }
