@@ -2,13 +2,13 @@ import React from 'react'
 import './header.scss'
 
 type HeaderProps = {
-    header: string
+    title: string
     description: string
 }
 
-const Header: React.FC<HeaderProps> = ({header, description}: HeaderProps) => (
+const Header: React.FC<HeaderProps> = ({title, description}: HeaderProps) => (
     <div className='react-project-header-main'>
-        <h1 className='title'>{header}</h1>
+        <h1 className='title'>{title}</h1>
         <p className='content'>{description}</p>
     </div>
 )
