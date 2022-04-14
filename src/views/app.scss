@@ -1,0 +1,19 @@
+.react-project-main {
+  .react-project-action-main {
+    .react-project-action-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+      gap: 35px;
+
+      .btn {
+        &.green {
+          background: radial-gradient(#acffc2, #2daf00);
+        }
+        &.red {
+          background: radial-gradient(#ffa7a7, #ff0000);
+        }
+      }
+    }
+  }
+}
