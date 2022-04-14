@@ -6,7 +6,7 @@ type HeaderProps = {
     description: string
 }
 
-const Header: React.FC<HeaderProps> = ({title, description}: HeaderProps) => (
+const Header: React.FC<HeaderProps> = ({title, description}: Readonly<HeaderProps>) => (
     <div className='react-project-header-main'>
         <h1 className='title'>{title}</h1>
         <p className='content'>{description}</p>
