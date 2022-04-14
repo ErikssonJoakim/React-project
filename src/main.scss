@@ -1,8 +1,12 @@
+* {
+  font-family: monospace;
+}
+
 body {
-    margin: 20px;
-    text-align: center;
-    border: solid;
-    border-width: 5px;
-    background: linear-gradient(#1f4799, #395180);
-    padding: 7%;
+  margin: 20px;
+  text-align: center;
+  border-width: 5px;
+  background: linear-gradient(#181c49, #395180);
+  background-repeat: no-repeat;
+  padding: 7%;
 }

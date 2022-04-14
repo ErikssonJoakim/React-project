@@ -43,7 +43,7 @@ const App = () => {
 
   return (
     <div className='react-project-main'>
-      <Header header={header} description={description} />
+      <Header title={header} description={description} />
       <Counter value={value} message={displayMessage()} />
       <div className='react-project-action-main'>
         <div className='react-project-action-wrapper'>
