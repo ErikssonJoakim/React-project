@@ -1,18 +1,24 @@
-import React from 'react'
-import './button.scss'
+import React from "react";
+import "./button.scss";
 
-type ButtonProps = {
-    name: string
-    onClick: () => void
-    buttonClassName?: string
-}
+type ButtonProps = Readonly<{
+  name: string;
+  onClick: () => void;
+  buttonClassName?: string;
+}>;
 
-const Button: React.FC<ButtonProps> = ({name, onClick, buttonClassName}: Readonly<ButtonProps>) => {
-    
-    const classNames = (): string => (
-        buttonClassName ? `btn ${buttonClassName}` : 'btn'
-    )
-      return <button className={classNames()} onClick={onClick}>{name}</button>
-}
+const Button: React.FC<ButtonProps> = ({
+  name,
+  onClick,
+  buttonClassName,
+}: ButtonProps) => {
+  const classNames = (): string =>
+    buttonClassName ? `btn ${buttonClassName}` : "btn";
+  return (
+    <button className={classNames()} onClick={onClick}>
+      {name}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
