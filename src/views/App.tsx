@@ -11,8 +11,10 @@ const description: string =
 const minValue: number = 2
 const maxValue: number = 8
 
-const App = () => {
-  const [value, setValue] = useState(getRandomNumber(minValue, maxValue))
+const App = (): JSX.Element => {
+  const [value, setValue]: readonly [number, (newValue: number) => void] = useState(
+    getRandomNumber(minValue, maxValue)
+  )
 
   const handleIncrement = useCallback((): void => {
     if (value < maxValue) {
@@ -43,12 +45,12 @@ const App = () => {
 
   return (
     <div className="react-project-main">
-      <Header title={header} description={description} />
-      <Counter value={value} message={displayMessage()} />
+      <Header description={description} title={header} />
+      <Counter message={displayMessage()} value={value} />
       <div className="react-project-action-main">
         <div className="react-project-action-wrapper">
-          <Button name="Increment &uarr;" buttonClassName="green" onClick={handleIncrement} />
-          <Button name="Decrement &darr;" buttonClassName="red" onClick={handleDecrement} />
+          <Button buttonClassName="green" name="Increment &uarr;" onClick={handleIncrement} />
+          <Button buttonClassName="red" name="Decrement &darr;" onClick={handleDecrement} />
         </div>
         <Button name="Reset &#8635;" onClick={handleReset} />
       </div>
