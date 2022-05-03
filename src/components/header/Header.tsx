@@ -2,8 +2,8 @@ import React from 'react'
 import './header.scss'
 
 type HeaderProps = {
-  title: string
-  description: string
+  readonly title: string
+  readonly description: string
 }
 
 const Header: React.FC<HeaderProps> = ({ title, description }: Readonly<HeaderProps>) => (

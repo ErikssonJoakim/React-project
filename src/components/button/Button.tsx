@@ -2,9 +2,9 @@ import React from 'react'
 import './button.scss'
 
 type ButtonProps = {
-  name: string
-  onClick: () => void
-  buttonClassName?: string
+  readonly name: string
+  readonly onClick: () => void
+  readonly buttonClassName?: string
 }
 
 const Button: React.FC<ButtonProps> = ({

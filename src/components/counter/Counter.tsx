@@ -2,8 +2,8 @@ import React from 'react'
 import './counter.scss'
 
 type CounterProps = {
-  value: number
-  message?: string
+  readonly value: number
+  readonly message?: string
 }
 
 const Counter: React.FC<CounterProps> = ({ value, message }: Readonly<CounterProps>) => (
