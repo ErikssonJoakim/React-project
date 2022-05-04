@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react'
 import Header from '../components/header/Header'
 import Counter from '../components/counter/Counter'
 import Button from '../components/button/Button'
@@ -6,13 +6,15 @@ import './app.scss'
 import { getRandomNumber } from '../utils'
 
 const header: string = 'Counter App'
-const description: string = 'This application creates a random number and allows the user to increment or decrement the number by 1.'
+const description: string =
+  'This application creates a random number and allows the user to increment or decrement the number by 1.'
 const minValue: number = 2
 const maxValue: number = 8
 
-const App = () => {
-  
-  const [value, setValue] = useState(getRandomNumber(minValue, maxValue))
+const App = (): JSX.Element => {
+  const [value, setValue]: readonly [number, (newValue: number) => void] = useState(
+    getRandomNumber(minValue, maxValue)
+  )
 
   const handleIncrement = useCallback((): void => {
     if (value < maxValue) {
@@ -42,18 +44,18 @@ const App = () => {
   }, [value])
 
   return (
-    <div className='react-project-main'>
-      <Header title={header} description={description} />
-      <Counter value={value} message={displayMessage()} />
-      <div className='react-project-action-main'>
-        <div className='react-project-action-wrapper'>
-          <Button name='Increment &uarr;' buttonClassName='green' onClick={handleIncrement} />
-          <Button name='Decrement &darr;' buttonClassName='red' onClick={handleDecrement} />
+    <div className="react-project-main">
+      <Header description={description} title={header} />
+      <Counter message={displayMessage()} value={value} />
+      <div className="react-project-action-main">
+        <div className="react-project-action-wrapper">
+          <Button buttonClassName="green" name="Increment &uarr;" onClick={handleIncrement} />
+          <Button buttonClassName="red" name="Decrement &darr;" onClick={handleDecrement} />
         </div>
-        <Button name='Reset &#8635;' onClick={handleReset} />
+        <Button name="Reset &#8635;" onClick={handleReset} />
       </div>
     </div>
-  );
+  )
 }
 
 export default App

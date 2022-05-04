@@ -1,0 +1,7 @@
+{
+    "extends": ["react-app", "react-app/jest", "@okp4"],
+     // may be combined with other shareable configurations
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+  }
